@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfumes Louis Vuitton en Colombia</title>
+  <!-- Conectamos el archivo de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO: lo primero que se ve -->
+  <header class="portada">
+    <div class="portada-texto">
+      <h1>Louis Vuitton</h1>
+      <p>Cuatro aromas inolvidables para cada momento del día</p>
+
+      <!-- Este botón se reemplaza por el saludo cuando el usuario se registra -->
+      <a class="boton" id="btn-registro" href="#registro">Registrarme</a>
+      <p class="bienvenida" id="bienvenida" hidden></p>
+
+      <a class="enlace" href="#precios">Ver precios</a>
+    </div>
+
+    <!-- CARRUSEL: 4 imágenes que se van turnando solas (la animación está en el CSS) -->
+    <div class="carrusel">
+      <img src="imaginationC.jpg">
+      <img src="nomadeC.webp">
+      <img src="limmenC.webp">
+      <img src="meteoreC.webp">
+    </div>
+  </header>
+
+  <!-- SECCIÓN 1: por qué comprarlos -->
+  <section class="seccion" id="porque">
+    <h2>¿Por qué comprarlos?</h2>
+    <div class="razones">
+      <div class="razon">
+        <h3>Un solo creador</h3>
+        <p>Los cuatro fueron creados por el perfumista Jacques Cavallier Belletrud.</p>
+      </div>
+      <div class="razon">
+        <h3>Frasco recargable</h3>
+        <p>Puedes rellenarlo en las tiendas Louis Vuitton que tienen fuente de perfume.</p>
+      </div>
+      <div class="razon">
+        <h3>Para todos los gustos</h3>
+        <p>Hay opciones frescas para el día y una intensa y oscura para la noche.</p>
+      </div>
+      <div class="razon">
+        <h3>Pruébalo primero</h3>
+        <p>Con un decant de 5 o 10 ml lo usas antes de invertir en el frasco completo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: información de cada perfume. Cada <article> es una tarjeta -->
+  <section class="seccion oscura" id="perfumes">
+    <h2>Conoce cada perfume</h2>
+    <div class="tarjetas">
+
+      <article class="tarjeta">
+        <img class="foto" src="imaginationN.webp" alt="Imagination">
+        <h3>Imagination</h3>
+        <p class="familia">Cítrico, ámbar y especiado</p>
+        <ul>
+          <li><strong>Salida:</strong> bergamota, naranja siciliana y cidra</li>
+          <li><strong>Corazón:</strong> neroli, jengibre y canela</li>
+          <li><strong>Fondo:</strong> té negro, ambroxan, madera de gaiac e incienso</li>
+          <li><strong>Duración:</strong> de 5 a 7 horas aprox (varía según tu piel; pruébalo en decant).</li>
+          <li><strong>Ocasión:</strong> día, oficina y salidas. Primavera y verano.</li>
+        </ul>
+      </article>
+
+      <article class="tarjeta">
+        <img class="foto" src="ombreN.webp" alt="Ombre Nomade">
+        <h3>Ombre Nomade</h3>
+        <p class="familia">Ámbar amaderado con oud</p>
+        <ul>
+          <li><strong>Salida:</strong> oud y frambuesa</li>
+          <li><strong>Corazón:</strong> rosa, azafrán y geranio</li>
+          <li><strong>Fondo:</strong> incienso y benjuí</li>
+          <li><strong>Duración:</strong> muy larga, con proyección fuerte (varía según tu piel; pruébalo en decant).</li>
+          <li><strong>Ocasión:</strong> noche y eventos especiales. Clima frío.</li>
+        </ul>
+      </article>
+
+      <article class="tarjeta">
+        <img class="foto" src="imensiteN.jpeg" alt="L'Immensité">
+        <h3>L'Immensité</h3>
+        <p class="familia">Fresco, ámbar y especiado</p>
+        <ul>
+          <li><strong>Salida:</strong> toronja, jengibre y bergamota</li>
+          <li><strong>Corazón:</strong> notas acuáticas, salvia, romero y geranio</li>
+          <li><strong>Fondo:</strong> ambroxan, ámbar y labdanum</li>
+          <li><strong>Duración:</strong> de 6 a 8 horas aprox (varía según tu piel; pruébalo en decant).</li>
+          <li><strong>Ocasión:</strong> oficina y tiempo libre. Clima cálido.</li>
+        </ul>
+      </article>
+
+      <article class="tarjeta">
+        <img class="foto" src="meteoreN.webp" alt="Météore">
+        <h3>Météore</h3>
+        <p class="familia">Cítrico aromático</p>
+        <ul>
+          <li><strong>Salida:</strong> mandarina, naranja siciliana y bergamota</li>
+          <li><strong>Corazón:</strong> pimientas, nuez moscada, neroli y cardamomo</li>
+          <li><strong>Fondo:</strong> vetiver de Java</li>
+          <li><strong>Duración:</strong> de 6 a 8 horas aprox (varía según tu piel; pruébalo en decant).</li>
+          <li><strong>Ocasión:</strong> uso diario y casual, de día.</li>
+        </ul>
+      </article> 
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: precios en pesos colombianos -->
+  <section class="seccion" id="precios">
+    <h2>Precios en Colombia</h2>
+    <div class="tabla-caja">
+      <table>
+        <tr>
+          <th>Perfume</th>
+          <th>Decant 5 ml</th>
+          <th>Decant 10 ml</th>
+          <th>Frasco 100 ml</th>
+        </tr>
+        <tr>
+          <td>Imagination</td>
+          <td>$95.000</td>
+          <td>$180.000</td>
+          <td>$1.790.000</td>
+        </tr>
+        <!-- Cuando tengas los precios, cambia "Consultar" por el valor -->
+        <tr>
+          <td>Ombre Nomade</td>
+          <td>$130,000</td>
+          <td>$230,000</td>
+          <td>$2,290,000</td>
+        </tr>
+        <tr>
+          <td>L'Immensité</td>
+          <td>$95,000</td>
+          <td>$180,000</td>
+          <td>$1,790,000</td>
+        </tr>
+        <tr>
+          <td>Météore</td>
+          <td>$95,000</td>
+          <td>$180,000</td>
+          <td>$1,790,000</td>
+        </tr>
+      </table>
+    </div>
+    <p class="nota">Precios de referencia de disfragancias.com. Pueden cambiar según la tienda.</p>
+  </section>
+
+  <!-- SECCIÓN 4: registro -->
+  <section class="seccion oscura" id="registro">
+    <h2>Regístrate</h2>
+    <form id="form-registro" class="registro">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="correo" placeholder="Tu correo" required>
+      <button type="submit" class="boton">Registrarme</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Página promocional de productos de fragancia-Nyxon Franco.</p>
+  </footer>
+
+  <!-- JAVASCRIPT: solo para mostrar el nombre (con HTML y CSS no se puede) -->
+  <script>
+    // Guardamos en variables los elementos que vamos a usar
+    const formulario = document.getElementById("form-registro");
+    const botonRegistro = document.getElementById("btn-registro");
+    const bienvenida = document.getElementById("bienvenida");
+    const seccionRegistro = document.getElementById("registro");
+
+    // Se ejecuta al enviar el formulario (los campos "required" ya se validaron)
+    formulario.addEventListener("submit", function (evento) {
+      evento.preventDefault(); // evita que la página se recargue
+
+      const nombre = document.getElementById("nombre").value.trim();
+      if (nombre === "") return; // por si escribió solo espacios
+
+      bienvenida.textContent = "¡Bienvenido, " + nombre + "!"; // muestra el saludo
+      bienvenida.hidden = false;      // aparece el saludo
+      botonRegistro.hidden = true;    // desaparece el botón
+      seccionRegistro.hidden = true;  // se oculta el formulario
+
+      window.scrollTo({ top: 0, behavior: "smooth" }); // sube al inicio
+    });
+  </script>
+</body>
+</html>

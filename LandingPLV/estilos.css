@@ -1,0 +1,267 @@
+/* ---------- COLORES---------- */
+:root {
+  --azul: #14213d;      /* fondo oscuro */
+  --dorado: #b8893b;    /* color de acento */
+  --claro: #eef1f5;     /* fondo de secciones claras */
+  --texto: #2b2f38;     /* color del texto normal */
+}
+
+/* ---------- BASE ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* ---------- PORTADA ---------- */
+
+.portada h1 {
+  font-size: 3.2rem;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+
+.boton {
+  display: inline-block;
+  background: var(--dorado);
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.boton:hover {
+  background: #9a7230;
+}
+
+/* ---------- SECCIONES ---------- */
+.seccion {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.seccion h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+
+/* La sección oscura ocupa todo el ancho de la pantalla */
+.oscura {
+  max-width: none;
+  background: var(--claro);
+}
+
+/* ---------- POR QUÉ COMPRARLOS ---------- */
+.razones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 25px;
+}
+
+.razon {
+  border-top: 3px solid var(--dorado);
+  padding-top: 12px;
+}
+
+.razon h3 {
+  margin-bottom: 6px;
+}
+
+/* ---------- TARJETAS DE PERFUMES ---------- */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.tarjeta h3 {
+  font-size: 1.5rem;
+}
+
+.familia {
+  color: var(--dorado);
+  margin-bottom: 12px;
+}
+
+.tarjeta ul {
+  list-style: none;
+}
+
+.tarjeta li {
+  margin-bottom: 6px;
+}
+
+/* ---------- TABLA DE PRECIOS ---------- */
+.tabla-caja {
+  overflow-x: auto; /* en celular la tabla se desliza si no cabe */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: var(--azul);
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+td:first-child {
+  text-align: left;
+  font-weight: bold;
+}
+
+.nota {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+footer {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ---------- CELULAR: pantallas pequeñas ---------- */
+@media (max-width: 480px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- NUEVO: portada con carrusel ---------- */
+[hidden] { display: none !important; } /* hace que "hidden" siempre oculte */
+
+.portada {
+  position: relative;  /* el carrusel se acomoda dentro de la portada */
+  overflow: hidden;
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* El texto va encima del carrusel */
+.portada-texto {
+  position: relative;
+  z-index: 1;
+}
+
+.portada p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.enlace {
+  color: white;
+  margin-left: 15px;
+}
+
+.bienvenida {
+  font-size: 1.6rem;
+  color: var(--dorado);
+}
+
+/* El carrusel: las 4 imágenes están una encima de otra y se muestran por turnos */
+.carrusel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carrusel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: pasar 16s infinite; /* 4 imágenes x 4 segundos */
+}
+
+.carrusel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 33, 61, 0.7);
+}
+
+/* Cada imagen empieza 4 segundos después de la anterior */
+.carrusel img:nth-child(2) { animation-delay: 4s; }
+.carrusel img:nth-child(3) { animation-delay: 8s; }
+.carrusel img:nth-child(4) { animation-delay: 12s; }
+
+/* Aparece, se queda visible y desaparece */
+@keyframes pasar {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ---------- NUEVO: imagen de las tarjetas ---------- */
+.foto {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: var(--claro);
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* ---------- NUEVO: formulario de registro ---------- */
+.registro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.registro input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button.boton {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
